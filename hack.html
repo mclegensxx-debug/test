@@ -1,0 +1,27 @@
+<html>
+<head><meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body{background:black;color:white;text-align:center;font-family:sans-serif;padding:30px}
+input{padding:15px;font-size:20px;width:80%;margin-top:20px}
+button{padding:15px 30px;font-size:20px;margin-top:15px;background:lime;border:none}
+#out{font-size:28px;margin-top:20px;color:lime}
+</style>
+</head>
+<body>
+<h2>if 10*12 is 120<br><br>what's 3x9?</h2>
+<input id="inp" placeholder="Type answer >>">
+<br><button onclick="check()">SUBMIT</button>
+<div id="out"></div>
+<script>
+function check(){
+ let v=document.getElementById('inp').value.toLowerCase();
+ let o=document.getElementById('out');
+ if(v.includes('27')){o.innerHTML='CORRECT!!!!';o.style.color='lime';}
+ else if(v=='hack.game'){o.innerHTML='hacking......<br>system hacked answer: 27';}
+ else if(v=='hack.system'){o.innerHTML='hacking....<br>ANTI-HACKING blocked!<br>FBI IS COMING!!!';o.style.color='red';}
+ else if(v.includes('quit')){o.innerHTML='GAME OVER';}
+ else{o.innerHTML='WRONG!';o.style.color='red';}
+}
+</script>
+</body>
+</html>
